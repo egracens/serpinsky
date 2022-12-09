@@ -13,18 +13,6 @@ class Serpinsky
       Point.new(width, 0),
       Point.new(width / 2, height)
     ]
-  end
-
-  def compute
-    initialize_points
-    points_count.times do
-      points << spawn_point
-    end
-  end
-
-  private
-
-  def initialize_points
     @points = [Point.new(width / 2, height / 2)]
   end
 
@@ -32,9 +20,13 @@ class Serpinsky
     point_a = initial_points.sample
     point_b = points.sample
 
-    Point.new(
+    new_point = Point.new(
       (point_a.x + point_b.x) / 2,
       (point_a.y + point_b.y) / 2
     )
+
+    points << new_point
+
+    new_point
   end
 end
