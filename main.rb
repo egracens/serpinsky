@@ -7,7 +7,7 @@ Bundler.require
 WIDTH = 800
 HEIGHT = 600
 POINTS_PER_FRAME = 100
-serpinsky_fractal = Serpinsky.new(width: WIDTH, height: HEIGHT, points_count: 10_000)
+serpinsky_fractal = Serpinsky.new(width: WIDTH, height: HEIGHT)
 
 # Window rendering
 set width: WIDTH, height: HEIGHT
